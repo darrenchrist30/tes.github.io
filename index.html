@@ -1,2 +1,35 @@
-Hello World
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Offline Mode</title>
+    
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="/tes.github.io/manifest.json">
+    
+    <!-- Tambahkan ikon agar mendukung PWA -->
+    <link rel="icon" href="/tes.github.io/images/logo.png" type="image/png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/tes.github.io/style.css">
 
+    <!-- Tambahkan Meta PWA -->
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <h1>Halo, Selamat Datang!</h1>
+    <p>Website ini bisa diakses **tanpa internet** setelah pertama kali dibuka.</p>
+
+    <img src="/tes.github.io/images/logo.png" alt="Logo" width="150">
+
+    <script>
+        // Mendaftarkan Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/tes.github.io/sw.js', { scope: '/tes.github.io/' })
+            .then(reg => console.log('Service Worker Registered!', reg))
+            .catch(err => console.log('Service Worker Registration Failed:', err));
+        }
+    </script>
+</body>
+</html>
