@@ -1,10 +1,10 @@
-const CACHE_NAME = "pwa-cache-v1";
+const CACHE_NAME = "tes-github-io-cache-v1";
 const urlsToCache = [
-    "/tes.github.io/",  // Cache halaman utama
-    "/tes.github.io/index.html", // Cache halaman utama secara eksplisit
-    "/tes.github.io/style.css",  // Cache file CSS
-    "/tes.github.io/script.js",  // Cache file JavaScript
-    "/tes.github.io/images/logo.png", // Cache gambar/logo
+    "/tes.github.io/",         // Cache halaman utama
+    "/tes.github.io/index.html",
+    "/tes.github.io/index.js",
+    "/tes.github.io/style.css", // Jika ada file CSS
+    "/tes.github.io/images/logo.png" // Jika ada gambar
 ];
 
 // Install Service Worker dan cache file
